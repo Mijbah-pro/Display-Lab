@@ -1,0 +1,26 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "sidebar hero"
+    "content hero"
+    "features features";
+  gap: 20px;
+}
+
+.sidebar { grid-area: sidebar; }
+.hero { grid-area: hero; }
+.content { grid-area: content; }
+.features { grid-area: features; }
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "sidebar"
+      "hero"
+      "content"
+      "features";
+  }
+}

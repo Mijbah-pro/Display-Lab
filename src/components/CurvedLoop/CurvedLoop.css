@@ -1,0 +1,20 @@
+.curved-loop-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  user-select: none;
+}
+
+.curved-loop-container svg {
+  width: 100%;
+  height: auto;
+}
+
+.curved-loop-text {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}

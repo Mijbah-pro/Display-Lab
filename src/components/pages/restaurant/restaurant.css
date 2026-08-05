@@ -1,0 +1,137 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+
+@layer components {
+  .section {
+    @apply py-24;
+  }
+
+  .section-heading {
+    @apply max-w-[760px] mb-12;
+  }
+
+  .section-heading.centered {
+    @apply mx-auto text-center mb-12;
+  }
+
+  .section-heading p {
+    @apply text-[17px] text-gray-600;
+  }
+
+  .hardware-section {
+    @apply bg-white;
+  }
+
+  .hardware-grid {
+    @apply grid grid-cols-6 gap-7;
+  }
+
+  .hardware-grid article {
+    @apply col-span-2 overflow-hidden rounded-2xl border border-slate-200 bg-white;
+  }
+
+  .hardware-grid article:nth-child(4) {
+    @apply col-start-2 col-span-2;
+  }
+
+  .hardware-grid article:nth-child(5) {
+    @apply col-start-4 col-span-2;
+  }
+
+  .hardware-grid h3,
+  .hardware-grid p {
+    @apply mx-[25px];
+  }
+
+  .hardware-grid h3 {
+    @apply mt-[23px] mb-2;
+  }
+
+  .hardware-grid p {
+    @apply mb-7 text-slate-600;
+  }
+
+  .hardware-visual {
+    @apply relative grid h-[240px] place-items-center overflow-hidden;
+    background: radial-gradient(circle at 50% 20%, white, #dce8ee);
+  }
+
+  .hardware-visual::before {
+    content: "";
+    @apply block bg-[#1b242b];
+    box-shadow: 0 18px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  .hardware-visual span {
+    @apply absolute grid place-items-center font-black tracking-[1px] text-white;
+    background: linear-gradient(135deg, #0d5e88, #2ba1bf);
+  }
+
+  /* TV */
+  .hardware-visual.tv::before {
+    @apply w-[210px] h-[125px] border-[7px] border-[#20262b];
+  }
+
+  .hardware-visual.tv span {
+    @apply w-[196px] h-[111px];
+  }
+
+  /* Kiosk */
+  .hardware-visual.kiosk::before {
+    @apply w-[100px] h-[185px] rounded-[5px];
+  }
+
+  .hardware-visual.kiosk span {
+    @apply w-[82px] h-[142px] top-7;
+  }
+
+  /* Window */
+  .hardware-visual.window::before {
+    @apply w-[215px] h-[145px] border-[8px] border-[#eef5f8];
+    box-shadow: 0 18px 30px rgba(0, 0, 0, 0.18),
+      0 0 0 2px #b9cad3;
+  }
+
+  .hardware-visual.window span {
+    @apply w-[199px] h-[129px];
+    background: linear-gradient(135deg, #0d5e88, #2ba1bf);
+  }
+
+  /* Promo */
+  .hardware-visual.promo::before {
+    @apply w-[112px] h-[185px] rounded-t-[7px] rounded-b-[3px];
+  }
+
+  .hardware-visual.promo::after {
+    content: "";
+    @apply absolute bottom-[35px] w-[142px] h-3 rounded-full;
+    background: rgba(15, 31, 44, 0.22);
+    filter: blur(5px);
+  }
+
+  .hardware-visual.promo span {
+    @apply absolute top-7 flex h-[155px] w-[94px] flex-col gap-2;
+    background: linear-gradient(145deg, #0e6c94, #31abc3);
+  }
+
+  .hardware-visual.promo span b {
+    @apply text-[15px];
+  }
+
+  .hardware-visual.promo span small {
+    @apply text-[7px] tracking-[0.7px];
+  }
+
+  /* Drive Thru */
+  .hardware-visual.drive::before {
+    @apply w-[115px] h-[170px] rounded;
+  }
+
+  .hardware-visual.drive span {
+    @apply absolute top-7 h-[148px] w-[96px] text-[11px];
+    background: linear-gradient(145deg, #a54217, #ef8b2c);
+  }
+
+}
+

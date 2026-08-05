@@ -1,0 +1,24 @@
+
+.logoSection {
+  padding: 40px 0;
+  /* background: #0f0f0f; */
+}
+
+.client-logo-swiper .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+.client-logo-swiper .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+}
+
+.logoImg {
+  max-width: 100%;
+  opacity: 0.9;
+  filter: grayscale(100%);
+  transition: 0.3s;
+
+}
