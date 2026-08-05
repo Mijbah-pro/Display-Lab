@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
-import { adminTemplate } from "../../../emails/adminTemplate";
-import { customerTemplate } from "../../../emails/customerTemplate";
+// import { adminTemplate } from "../../../emails/adminTemplate";
+// import { customerTemplate } from "../../../emails/customerTemplate";
 import { transporter } from "../../../lib/mail";
 
 export async function POST(req) {
