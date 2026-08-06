@@ -16,43 +16,15 @@ export default function SingleProductInquiry({ Product, onClose }) {
   
  
   
-  const [productInquiry, setProductInquiry] = useState(false)
+  const [productInquiry, setProductInquiry] = useState(true)
+
+  const defaultInquiryType = inquiryTypes[2] || "";
+
   // Ensure productTypes array exists before initializing form
   const defaultProductType = productTypes[0] || "";
 
   // 2. Pass index 0 into useForm defaultValues
   const [productTypetext, setProductTypetext] = useState(productTypes[0] || "");
-
-
-  const defaultCheckedFN = (singleProductName) => {
-    if( productTypetext === "All Products" && singleProductName === Product.name) {
-
-      return true
-      // console.log(true);
-      
-    }
-    else if( productTypetext === "Indoor Display" ){
-      return false
-      // console.log(false);
-    }
-    else if(productTypetext === "Outdoor Display" ){
-      return false
-      // console.log(false);
-    }
-    else if(productTypetext === "Kiosk"){
-      return false
-      // console.log(false);
-    }
-    else if( productTypetext === "Video Wall"){
-      return false
-      // console.log(false);
-    }
-    else if(productTypetext === "Menu Board"){
-      return false
-      // console.log(false);
-    }
-  } 
-  //  console.log(defaultCheckedFN() , " console.log(defaultCheckedFN(item.name));");
 
   const mutation = useMutation({
     mutationFn: async (data) => {
@@ -90,7 +62,7 @@ export default function SingleProductInquiry({ Product, onClose }) {
       fullName: "",
       phone: "",
       email: "",
-      inquiryType: "",
+      inquiryType: defaultInquiryType,
       products: [],
       productType: defaultProductType,
       businessName: "",
@@ -122,8 +94,8 @@ export default function SingleProductInquiry({ Product, onClose }) {
         <div>
           <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10 overflow-hidden">
           
-                      <Image className="w-full h-full" src={"/images/logo/icon.png"} alt="" width={56} height={56} />
-                    </div>
+            <Image className="w-full h-full" src={"/images/logo/icon.png"} alt="" width={56} height={56} />
+          </div>
 
           <h2 className="mb-4 text-[26px] font-extrabold leading-tight">
             Send Us Inquiry
@@ -466,8 +438,6 @@ export default function SingleProductInquiry({ Product, onClose }) {
                           {...register("products")}
                           value={item.name}
                           type="checkbox"
-                          defaultChecked={productTypetext === "All Products" && item.name === Product.name ? true : false}
-                          // defaultChecked={productTypetext === "All Products" && index[0] ? defaultCheckedFN(item.name) : false}
                           className="peer absolute opacity-0 w-0 h-0"
                         />
 
@@ -488,67 +458,6 @@ export default function SingleProductInquiry({ Product, onClose }) {
                   ))}
                 </Swiper>
               </div>
-              {/* <div className="flex gap-3">
-                {productTypetext && AllTypesProductsDatas.find((item) => item.productsType === productTypetext) ?
-                  AllTypesProductsDatas.find((item) => item.productsType === productTypetext)?.products?.map((item, index) => (
-                    <div key={index}>
-                      <input
-                        id={`product${index + 1}`}
-                        name="products"
-                        {...register("products")}
-                        value={item.name}
-                        type="checkbox"
-                        className="peer absolute opacity-0 w-0 h-0"
-                      />
-
-                      <label
-                        htmlFor={`product${index + 1}`}
-                        className="ml-2 block cursor-pointer rounded-lg border-2 border-transparent p-1 transition-all peer-checked:border-blue-500"
-                      >
-                        <Image
-                          src={item.image}
-                          alt={item.name}
-                          width={50}
-                          height={50}
-                          className="h-full w-full"
-                        />
-                      </label>
-
-                    </div>
-                  ))
-                  :
-
-                  ProductItems?.map((item, index) => (
-                    <div key={index}>
-                      <input
-                        id={`product${index + 1}`}
-                        name="products"
-                        {...register("products")}
-                        value={item.name}
-                        type="checkbox"
-                        // defaultChecked={index === 0}
-                        className="peer absolute opacity-0 w-0 h-0"
-                      />
-
-                      <label
-                        htmlFor={`product${index + 1}`}
-                        className="ml-2 block cursor-pointer rounded-lg border-2 border-transparent p-1 transition-all peer-checked:border-blue-500"
-                      >
-                        <Image
-                          src={item.image}
-                          alt={item.name}
-                          width={50}
-                          height={50}
-                          className="h-full w-full"
-                        />
-                      </label>
-
-                    </div>
-                  ))
-                }
-
-
-              </div> */}
               <p className="text-red-500 text-sm">
                 {errors.products?.message}
               </p>

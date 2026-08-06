@@ -537,7 +537,6 @@ export const inquiryTypes = [
   "General Question",
   "Request a Quote",
   "Product Inquiry",
-  "Schedule a Demo",
   "Support",
   "Partnership",
 ]
