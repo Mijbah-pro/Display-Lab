@@ -11,7 +11,7 @@ function NewProductDesign() {
     {
       product_name: "Indoor Display",
       product_slide_image: [
-        "/images/products/product-1.png",
+        "/images/products/Ultra_Thin_Dual_Side_Stand_Display.png",
         "/images/products/product-slide-image1.jpg",
       ],
     },

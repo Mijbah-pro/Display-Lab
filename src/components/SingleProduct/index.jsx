@@ -122,7 +122,7 @@ function SingleProduct({ product, index }) {
 
 
     // Utilize the high-res transparent PNG images for a clean blend with the card gradients
-    const isMenuBoardOrWindow = product.id === 12 || product.id === 8 || product.image?.includes("12.png") || product.image?.includes("product-8.png");
+    const isMenuBoardOrWindow = product.id === 12 || product.id === 8 || product.image?.includes("3D_Holographic_Fan.png") || product.image?.includes("Outdoor_Digital_A_Display.png");
     return (
         <>
         <div 

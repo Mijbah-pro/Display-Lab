@@ -49,19 +49,19 @@ function NeedHelp() {
             {/* Standing Kiosk Display */}
             <img
               className="absolute left-[5%] lg:left-[15%] bottom-0 h-[105%] w-auto object-contain z-30 drop-shadow-[0_12px_24px_rgba(0,180,216,0.25)] transition-transform duration-500 hover:scale-[1.03]"
-              src="/images/products/product-6.png"
+              src="/images/products/Window_Display.png"
               alt="Floor Standing Kiosk"
             />
             {/* Wall Mount/Video Wall Display */}
             <img
               className="absolute left-[38%] lg:left-[45%] bottom-[12px] h-[75%] w-auto object-contain z-20 drop-shadow-[0_15px_30px_rgba(0,180,216,0.3)] transition-transform duration-500 hover:scale-[1.03]"
-              src="/images/products/product-7.png"
+              src="/images/products/K_Style_Presentation.png"
               alt="Video Wall Display"
             />
             {/* Digital Menu Board Display */}
             <img
               className="absolute left-[70%] lg:left-[75%] bottom-[12px] h-[70%] w-auto object-contain z-10 drop-shadow-[0_10px_20px_rgba(0,180,216,0.2)] transition-transform duration-500 hover:scale-[1.03]"
-              src="/images/products/product-11.png"
+              src="/images/products/GOBO_Projector.png"
               alt="Digital Menu Board"
             />
           </div>

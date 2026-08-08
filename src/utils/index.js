@@ -315,98 +315,98 @@ export const ProductsDatas = [
   {
     id: 1,
     name: "Ultra Thin Dual Side Stand Display",
-    image: "/images/products/product-1.png",
-    category: "indoor",
+    image: "/images/products/Ultra_Thin_Dual_Side_Stand_Display.png",
+    category: ["indoor", "ultra_thin_dual_side_stand_display"],
     product_items: [
       {
         name: "Ultra Thin Dual Side Stand Display",
-        image: "/images/products/product-1.png",
+        image: "/images/products/Ultra_Thin_Dual_Side_Stand_Display.png",
       },
       {
         name: "Digital Stand Kiosk",
-        image: "/images/products/product-2.png",
+        image: "/images/products/Digital_Stand_Kiosk.png",
       },
     ],
   },
   {
     id: 2,
     name: "Digital Stand Kiosk",
-    image: "/images/products/product-2.png",
-    category: "kiosks",
+    image: "/images/products/Digital_Stand_Kiosk.png",
+    category: ["indoor", "digital_stand_kiosk"],
     product_items: [
       {
         name: "Digital Stand Kiosk",
-        image: "/images/products/product-2.png",
+        image: "/images/products/Digital_Stand_Kiosk.png",
       },
       {
         name: "Ultra Thin Dual Side Stand Display",
-        image: "/images/products/product-1.png",
+        image: "/images/products/Ultra_Thin_Dual_Side_Stand_Display.png",
       },
       {
         name: "DIGITAL STAND KIOSK2",
-        image: "/images/products/product-3.png",
+        image: "/images/products/Digital_Stand_Kiosk2.png",
       },
     ],
   },
   {
     id: 3,
     name: "DIGITAL STAND KIOSK2",
-    image: "/images/products/product-3.png",
-    category: "3d_holograms",
+    image: "/images/products/Digital_Stand_Kiosk2.png",
+    category: ["indoor", "digital_stand_kiosk"],
   },
   {
     id: 4,
     name: "Self Ordering Kiosk",
-    image: "/images/products/product-4.png",
-    category: "kiosks",
+    image: "/images/products/Self_Ordering_Kiosk.png",
+    category: ["indoor", "self_ordering_kiosk"],
   },
   {
     id: 5,
     name: "DIGITAL POSTER DISPLAY",
-    image: "/images/products/product-5.png",
-    category: "indoor",
+    image: "/images/products/Digital_Poster_Display.png",
+    category: ["indoor", "digital_poster_display"],
   },
   {
     id: 6,
     name: "WINDOW DISPLAY",
-    image: "/images/products/product-6.png",
-    category: "kiosks",
+    image: "/images/products/Window_Display.png",
+    category: ["indoor", "window_display"],
   },
   {
     id: 7,
     name: "“K” STYLE PRESENTATION",
-    image: "/images/products/product-7.png",
-    category: "indoor",
+    image: "/images/products/K_Style_Presentation.png",
+    category: ["indoor", "k_style_presentation"],
   },
   {
     id: 8,
     name: "OUTDOOR DIGITAL “A” DISPLAY",
-    image: "/images/products/product-8.png",
-    category: "indoor",
+    image: "/images/products/Outdoor_Digital_A_Display.png",
+    category: ["outdoor", "outdoor_digital_a_display"],
   },
   {
     id: 9,
     name: "Digital Menu Board",
-    image: "/images/products/product-9.png",
-    category: "video_walls",
+    image: "/images/products/Digital_Menu_Board.png",
+    category: ["indoor", "digital_menu_board"],
   },
   {
     id: 10,
-    name: "WALL MOUNT",
-    image: "/images/products/product-10.png",
-    category: "outdoor",
+    name: "WALL MOUNTED DISPLAY",
+    image: "/images/products/Wall_Mount.png",
+    category: ["indoor", "window_display"],
   },
   {
     id: 11,
     name: "GOBO Projector",
-    image: "/images/products/product-11.png",
-    category: "video_walls",
+    image: "/images/products/GOBO_Projector.png",
+    category: ["indoor", "gobo_projectors"],
   },
   {
     id: 12,
     name: "3D Holographic Fan",
-    image: "/images/products/12.png",
-    category: "menu_boards",
+    image: "/images/products/3D_Holographic_Fan.png",
+    category: ["indoor", "menu_boards"],
   },
 ];
 // "Indoor Display",
@@ -421,7 +421,7 @@ export const AllTypesProductsDatas = [
     products: [
       {
         name: "Ultra Thin Dual Side Stand Display",
-        image: "/images/products/product-1.png",
+        image: "/images/products/Ultra_Thin_Dual_Side_Stand_Display.png",
       },
       {
         name: "Digital Stand Kiosk",
@@ -429,23 +429,23 @@ export const AllTypesProductsDatas = [
       },
       {
         name: "Self Ordering Kiosk",
-        image: "/images/products/product-4.png",
+        image: "/images/products/Self_Ordering_Kiosk.png",
       },
       {
         name: "WINDOW DISPLAY",
-        image: "/images/products/product-6.png",
+        image: "/images/products/Window_Display.png",
       },
       {
         name: "“K” STYLE PRESENTATION",
-        image: "/images/products/product-7.png",
+        image: "/images/products/K_Style_Presentation.png",
       },
       {
-        name: "WALL MOUNT",
-        image: "/images/products/product-10.png",
+        name: "WALL MOUNTED DISPLAY",
+        image: "/images/products/Wall_Mount.png",
       },
       {
         name: "Digital Menu Board",
-        image: "/images/products/product-9.png",
+        image: "/images/products/Digital_Menu_Board.png",
       },
     ],
   },
@@ -454,7 +454,7 @@ export const AllTypesProductsDatas = [
     products: [
       {
         name: "Ultra Thin Dual Side Stand Display",
-        image: "/images/products/product-1.png",
+        image: "/images/products/Ultra_Thin_Dual_Side_Stand_Display.png",
       },
       {
         name: "Digital Stand Kiosk",
@@ -462,19 +462,19 @@ export const AllTypesProductsDatas = [
       },
       {
         name: "Self Ordering Kiosk",
-        image: "/images/products/product-4.png",
+        image: "/images/products/Self_Ordering_Kiosk.png",
       },
       {
         name: "“K” STYLE PRESENTATION",
-        image: "/images/products/product-7.png",
+        image: "/images/products/K_Style_Presentation.png",
       },
       {
-        name: "WALL MOUNT",
-        image: "/images/products/product-10.png",
+        name: "WALL MOUNTED DISPLAY",
+        image: "/images/products/Wall_Mount.png",
       },
       {
         name: "Digital Menu Board",
-        image: "/images/products/product-9.png",
+        image: "/images/products/Digital_Menu_Board.png",
       },
     ],
   },
@@ -483,21 +483,21 @@ export const AllTypesProductsDatas = [
     products: [
       {
         name: "DIGITAL POSTER DISPLAY",
-        image: "/images/products/product-5.png",
+        image: "/images/products/Digital_Poster_Display.png",
       },
 
       {
         name: "OUTDOOR DIGITAL “A” DISPLAY",
-        image: "/images/products/product-8.png",
+        image: "/images/products/Outdoor_Digital_A_Display.png",
       },
 
       {
         name: "GOBO Projector",
-        image: "/images/products/product-11.png",
+        image: "/images/products/GOBO_Projector.png",
       },
       {
         name: "3D Holographic Fan",
-        image: "/images/products/12.png",
+        image: "/images/products/3D_Holographic_Fan.png",
       },
     ],
   },

@@ -98,13 +98,13 @@ function ReadyToUpgrade() {
             {/* Wall Mount/Video Wall Display */}
             <img
               className="absolute left-[5%] lg:left-[15%] bottom-[12px] h-[78%] w-auto object-contain z-10 drop-shadow-[0_15px_30px_rgba(0,180,216,0.3)] transition-transform duration-500 hover:scale-[1.03]"
-              src="/images/products/product-4.png"
+              src="/images/products/Digital_Stand_Kiosk.png"
               alt="Video Wall Display"
             />
             {/* Standing Kiosk Display */}
             <img
               className="absolute left-[62%] lg:left-[68%] bottom-0 h-[105%] w-auto object-contain z-20 drop-shadow-[0_12px_24px_rgba(0,180,216,0.25)] transition-transform duration-500 hover:scale-[1.03]"
-              src="/images/products/product-1.png"
+              src="/images/products/Ultra_Thin_Dual_Side_Stand_Display.png"
               alt="Floor Standing Kiosk"
             />
           </div>

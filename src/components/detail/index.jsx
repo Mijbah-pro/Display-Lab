@@ -8,7 +8,14 @@ import RWInstallation from "./rWInstallations";
 import { products_details_all_data } from "@/utils/products_details_data";
 
 function Detail({ productName }) {
-  const productData = products_details_all_data[productName] || products_details_all_data["1"];
+// Gracefully handle undefined/null productName or slug mismatches
+  const productData =
+    products_details_all_data[productName] ||
+    Object.values(products_details_all_data).find(
+      (p) => p.product_name.toLowerCase() === productName?.toLowerCase()
+    ) ||
+    products_details_all_data[1];
+  console.log("productData", productData); // log
 
   return (
     <>

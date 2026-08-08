@@ -4,6 +4,7 @@ import {
     DoorOpen,
     Grid2x2,
     LayoutPanelLeft,
+    Lightbulb,
     Monitor,
     Presentation,
     ShoppingCart,
@@ -14,64 +15,69 @@ import Reveal from "../utils/Reveal";
 function ProductCetagoryImage({ selectedCategory, setSelectedCategory }) {
     const categories = [
         {
-            id: "indoor",
+            id: "ultra_thin_dual_side_stand_display",
             name: "Ultra Thin Dual Side Stand Display",
             description: "Sleek and ultra-thin displays with dual side visibility.",
-            image: "/images/products/product-1.png",
+            image: "/images/products/Ultra_Thin_Dual_Side_Stand_Display.png",
             icon: Monitor,
         },
         {
-            id: "kiosks",
+            id: "digital_stand_kiosk",
             name: "Digital Stand Kiosk",
             description: "Perfect for promotions, advertising and brand awareness.",
-            image: "/images/products/product-2.png",
+            image: "/images/products/Digital_Stand_Kiosk.png",
             icon: DoorOpen,
         },
         {
-            id: "kiosks",
+            id: "self_ordering_kiosk",
             name: "Self Ordering Kiosk",
             description: "Interactive kiosks that enhance customer experience and reduce wait time.",
-            image: "/images/products/product-4.png",
+            image: "/images/products/Digital_Stand_Kiosk.png",
             icon: ShoppingCart,
         },
         {
-            id: "indoor",
+            id: "digital_poster_display",
             name: "Digital Poster Display",
             description: "Bring your content to life with vibrant digital posters.",
-            image: "/images/products/product-5.png",
+            image: "/images/products/Digital_Poster_Display.png",
             icon: LayoutPanelLeft,
         },
         {
-            id: "indoor",
+            id: "window_display",
             name: "Window Display",
             description: "Attract attention with bright and eye-catching window displays.",
-            image: "/images/products/product-6.png",
+            image: "/images/products/Window_Display.png",
             icon: Grid2x2,
         },
         {
-            id: "kiosks",
+            id: "k_style_presentation",
             name: '"K" Presentation Stand Display',
             description: "Stylish and portable displays for high impact presentations and events.",
-            image: "/images/products/product-7.png",
+            image: "/images/products/K_Style_Presentation.png",
             icon: Presentation,
         },
         {
-            id: "outdoor",
+            id: "outdoor_digital_a_display",
             name: "Outdoor Digital A Display",
             description: "Weatherproof displays built for outdoor performance and durability.",
-            image: "/images/products/product-8.png",
+            image: "/images/products/Outdoor_Digital_A_Display.png",
             icon: CloudDrizzle,
         },
         {
-            id: "menu_boards",
+            id: "digital_menu_board",
             name: "Digital Menu Board",
             description: "Display menus and offers in a modern and dynamic way.",
-            image: "/images/products/product-10.png",
+            image: "/images/products/Digital_Menu_Board.png",
             icon: ClipboardList,
         },
+        {
+            id: "gobo_projectors",
+            name: "GOBO Projector",
+            description: "Create stunning visual effects with our advanced GOBO projectors.",
+            image: "/images/products/GOBO_Projector.png",
+            icon: Lightbulb,
+        }
     ];
-
-    console.log(categories, "categories");
     
     const handleCategoryClick = (id) => {
         setSelectedCategory(id);

@@ -6,62 +6,62 @@ function Products() {
     {
       id: 1,
       name: "Ultra Thin Dual Side Stand Display",
-      image: "/images/products/product-1.png",
+      image: "/images/products/Ultra_Thin_Dual_Side_Stand_Display.png",
     },
     {
       id: 2,
       name: "Digital Stand Kiosk",
-      image: "/images/products/product-2.png",
+      image: "/images/products/Digital_Stand_Kiosk.png",
     },
     {
       id: 3,
       name: "3D Holographic Fan",
-      image: "/images/products/product-3.png",
+      image: "/images/products/Digital_Stand_Kiosk.png",
     },
     {
       id: 4,
       name: "Self Ordering Kiosk",
-      image: "/images/products/product-4.png",
+      image: "/images/products/Digital_Stand_Kiosk.png",
     },
     {
       id: 5,
       name: "Wall Mounted Display",
-      image: "/images/products/product-5.png",
+      image: "/images/products/Digital_Poster_Display.png",
     },
     {
       id: 6,
       name: "Slim Floor Standing Kiosk",
-      image: "/images/products/product-6.png",
+      image: "/images/products/Window_Display.png",
     },
     {
       id: 7,
       name: "Smart Digital Poster",
-      image: "/images/products/product-7.png",
+      image: "/images/products/K_Style_Presentation.png",
     },
     {
       id: 8,
       name: "High Brightness Window Display",
-      image: "/images/products/product-8.png",
+      image: "/images/products/Outdoor_Digital_A_Display.png",
     },
     {
       id: 9,
       name: "Interactive Flat Panel",
-      image: "/images/products/product-9.png",
+      image: "/images/products/Digital_Menu_Board .png",
     },
     {
       id: 10,
       name: "IP65 Outdoor Kiosk",
-      image: "/images/products/product-10.png",
+      image: "/images/products/Digital_Menu_Board.png",
     },
     {
       id: 11,
       name: "Ultra Slim Wall Mount Display",
-      image: "/images/products/product-11.png",
+      image: "/images/products/GOBO_Projector.png",
     },
     {
       id: 12,
       name: "Digital Menu Board",
-      image: "/images/products/12.png",
+      image: "/images/products/3D_Holographic_Fan.png",
     },
   ];
 

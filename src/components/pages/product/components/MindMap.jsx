@@ -147,7 +147,7 @@ function MindMap() {
               <div className="w-[35%] flex items-center justify-center shrink-0">
                 <img
                   className="w-10 h-16 object-contain drop-shadow-[0_4px_10px_rgba(0,0,0,0.15)]"
-                  src="/images/products/product-6.png"
+                  src="/images/products/Window_Display.png"
                   alt="Kiosk Hardware"
                 />
               </div>

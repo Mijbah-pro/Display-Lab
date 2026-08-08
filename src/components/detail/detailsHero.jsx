@@ -1,8 +1,11 @@
 "use client"
+import Image from "next/image";
 import Link from "next/link";
 
 function DetailsHero({ productData }) {
   if (!productData) return null;
+  console.log(productData, "productData");
+  
 
   return (
     <>
@@ -26,7 +29,7 @@ function DetailsHero({ productData }) {
               </div>
             </div>
             <div className="relative flex justify-center lg:justify-end">
-              <img 
+              <Image width={500} height={500} 
                 className="max-h-[500px] object-contain rounded-2xl shadow-xl transition-transform duration-300 hover:scale-105" 
                 src={productData.product_image} 
                 alt={productData.product_name} 
