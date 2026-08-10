@@ -117,9 +117,9 @@ function Products({ selectedCategory: propSelectedCategory, setSelectedCategory:
                       <button
                         key={cat.id}
                         onClick={() => handleCategorySelect(cat.id)}
-                        className={`flex items-center gap-2.5 px-5 py-3 rounded-xl text-sm font-semibold transition-all duration-200 cursor-pointer shrink-0 ${isActive
+                        className={`flex items-center gap-2.5 px-5 py-3 rounded-xl text-sm font-semibold transition-all duration-200 cursor-pointer shrink-0 bg-cyan-50 ${isActive
                             ? "bg-cyan-600 text-white shadow-md shadow-cyan-600/20"
-                            : "text-slate-600 hover:text-cyan-600 hover:bg-slate-50"
+                            : "text-slate-600"
                           }`}
                       >
                         <Icon size={18} />
@@ -140,9 +140,9 @@ function Products({ selectedCategory: propSelectedCategory, setSelectedCategory:
                       <button
                         key={cat.id}
                         onClick={() => handleCategorySelect(cat.id)}
-                        className={`flex items-center gap-2.5 px-5 py-3 rounded-xl text-sm font-semibold transition-all duration-200 cursor-pointer shrink-0 ${isActive
+                        className={`flex items-center gap-2.5 px-5 py-3 rounded-xl text-sm font-semibold transition-all duration-200 cursor-pointer shrink-0 bg-cyan-50 ${isActive
                             ? "bg-cyan-600 text-white shadow-md shadow-cyan-600/20"
-                            : "text-slate-600 hover:text-cyan-600 hover:bg-slate-50"
+                            : "text-slate-600 hover:text-cyan-600"
                           }`}
                       >
                         <Icon size={18} />
