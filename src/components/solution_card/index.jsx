@@ -107,7 +107,7 @@ function SolutionCard() {
 
           {/* Cards */}
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
             {card_Data.map((card, index) => (
               <SingleSolutionCard2 key={index} card={card} />
             ))}

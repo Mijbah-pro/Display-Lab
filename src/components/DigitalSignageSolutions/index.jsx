@@ -148,10 +148,10 @@ function DigitalSignageSolutions() {
 
   return (
     <>
-      <div className="pt-16 md:pt-24">
+      <div className="pt-10 xl:pt-24">
         <div className="max-w-7xl mx-auto px-4">
           {/* Hero Section */}
-          <div className="hero_section grid lg:grid-cols-2 gap-12 items-center pb-24">
+          <div className="hero_section grid lg:grid-cols-2 gap-12 items-center xl:pb-24">
             <Reveal props={"w-full"}>
               <div className="relative">
                 <div className="relative">
@@ -179,9 +179,9 @@ function DigitalSignageSolutions() {
                 </div>
               </div>
             </Reveal>
-            <div className="text-center lg:text-left">
-              <Reveal>
-                <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+            <div className="text-center xl:text-left mx-auto">
+              <Reveal props={"w-full"}>
+                <h1 className="text-4xl xl:text-5xl font-bold text-gray-900 mb-6 mx-auto lg:mx-0 leading-tight">
                   Digital Signage <span className="highlight">Solutions</span> <br /> for Every Industry
                 </h1>
               </Reveal>
@@ -211,7 +211,8 @@ function DigitalSignageSolutions() {
 
                       {/* RIGHT SIDE */}
                       {/* IMAGE */}
-                      <div className="hero rounded-xl overflow-hidden mb-6 w-136.25 h-86.25 md:w-220 md:h-139">
+                      {/* w-136.25 h-86.25 */}
+                      <div className="hero rounded-xl overflow-hidden mb-6 w-full h-full lg:w-220 lg:h-139">
                         <Swiper
                           modules={[Autoplay]}
                           className="w-full h-full"

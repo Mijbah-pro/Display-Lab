@@ -9,7 +9,7 @@ import Reveal from "./utils/Reveal";
 
 function Hero() {
   return (
-    <section className="bg-linear-to-br from-cyan-50 via-blue-50 to-purple-50 py-16 md:py-24 lg:pt-32 lg:pb-5">
+    <section className="bg-linear-to-br from-cyan-50 via-blue-50 to-purple-50 pt-16 md:pt-24 lg:pt-32">
       <div className="relative z-10 mx-auto max-w-375 px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2">
           {/* Left */}
@@ -90,7 +90,7 @@ function Hero() {
           </Reveal>
         </div>
 
-        <div className="space-large"></div>
+        {/* <div className="space-large"></div> */}
 
         <ClientLogoSlider
           autoPlay={true}

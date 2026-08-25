@@ -25,7 +25,7 @@ function ProductSlider() {
           >
             {productImages?.map((singleProduct, index) => (
               <SwiperSlide key={index}>
-                <div className="py-50 ">
+                <div className="py-20">
                   <Link href={"/products"}>
                     <Image
                       className="w-full h-full rounded-2xl"

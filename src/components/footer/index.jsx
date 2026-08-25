@@ -18,12 +18,12 @@ function Footer() {
       href: "/"
     },
     {
-      name: "Cms",
+      name: "CMS",
       href: "/cms"
     },
 
     {
-      name: "Porducts",
+      name: "Products",
       href: "/products"
     },
     {
@@ -148,7 +148,7 @@ function Footer() {
                   <div className="flex flex-col md:flex-row items-start justify-between w-full gap-x-8 gap-y-12">
                     <div className="flex flex-col items-start gap-12">
                       <div className="flex flex-col items-start gap-4">
-                        <div className="text-[#3095b5]">Quick Links</div>
+                        <div className="text-[#3095b5] font-bold">Quick Links</div>
                         {quickLinksPages.map((link, index) => (
                           <Link
                             href={link.href}
@@ -162,7 +162,7 @@ function Footer() {
                     </div>
                     <div className="flex flex-col items-start gap-12">
                       <div className="flex flex-col items-start gap-4">
-                        <div className="text-[#3095b5]">Products</div>
+                        <div className="text-[#3095b5] font-bold">Products</div>
                         {quickLinksProducts.map((link, index) => (
                           <Link
                             href={link.href}
@@ -176,7 +176,7 @@ function Footer() {
                     </div>
                     <div className="flex flex-col items-start gap-12">
                       <div className="flex flex-col items-start gap-4">
-                        <div className="text-[#3095b5]">Industrys</div>
+                        <div className="text-[#3095b5] font-bold">Industrys</div>
                         {quickLinksIndustrys.map((link, index) => (
                           <Link
                             href={link.href}
@@ -190,7 +190,7 @@ function Footer() {
                     </div>
                     <div className="flex flex-col items-start gap-12">
                       <div className="flex flex-col items-start gap-4">
-                        <div className="text-[#3095b5]">Rental</div>
+                        <div className="text-[#3095b5] font-bold">Rental</div>
                         {quickLinksRental.map((link, index) => (
                           <Link
                             href={link.href}
@@ -219,7 +219,7 @@ function Footer() {
                         </Link>
                       </div>
                       <div className="flex flex-col items-start gap-4">
-                        <Link href={"/contact"} className="text-[#3095b5]">Contact Us</Link>
+                        <Link href={"/contact"} className="text-[#3095b5] font-bold">Contact Us</Link>
                         <div className="">
                           901 S Highland St, # 301, {" "}
                           <span className="block">Arlington, VA, United States, 22204</span>

@@ -100,8 +100,6 @@ function Products({ selectedCategory: propSelectedCategory, setSelectedCategory:
               </p>
             </div>
           </Reveal>
-
-          {/* Product Categories Bar */}
           
 
             {/* Product Categories Bar */}

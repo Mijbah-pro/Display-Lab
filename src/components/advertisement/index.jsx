@@ -6,7 +6,7 @@ import Link from "next/link";
 function Advertisement_Solutions() {
   return (
     <>
-      <div className="py-16 md:py-24">
+      <div className="pt-16 md:pt-24">
         <div className="max-w-7xl mx-auto px-4">
           {/* Hero Section */}
           <div className="hero_section grid lg:grid-cols-2 gap-12 items-center pb-24">

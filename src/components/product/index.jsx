@@ -12,14 +12,14 @@ function ProductSection() {
     <>
       <div className="">
         {/* Hero Section */}
-        <div className="max-w-7xl mx-auto hero_section grid lg:grid-cols-2 gap-12 items-center">
+        <div className="max-w-7xl mx-auto px-4 hero_section grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left">
-            <Reveal>
+            <Reveal props={"w-full"}>
               <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                 Display <span className="highlight"> Products </span> <br /> Smart Solutions for Business Growth
               </h1>
             </Reveal>
-            <Reveal>
+            <Reveal props={"w-full"}>
               <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto lg:mx-0">
                 Display Lab offers versatile digital signage solutions for diverse business needs, including Stand Kiosk, Indoor Display, 3D Hologram Display, and Self-Ordering Kiosk, designed to enhance engagement, improve efficiency, and deliver modern interactive customer experiences.
               </p>
@@ -38,7 +38,7 @@ function ProductSection() {
                     repeat: Infinity,
                     ease: "linear",
                   }}
-                  className="bg-white rounded-2xl shadow-2xl p-4 relative z-10"
+                  className="rounded-2xl shadow-2xl p-4 relative z-10"
                 >
                   <video
                     className="rounded-xl aspect-video w-full h-full object-cover"

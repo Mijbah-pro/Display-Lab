@@ -8,7 +8,7 @@ function CMS_Marketing() {
       <div className="container_paddingTop">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center container_paddingBtm">
-            <Reveal>
+            <Reveal props={"w-full"}>
               <div className="relative">
                 <div className="relative">
                   <div
@@ -35,14 +35,14 @@ function CMS_Marketing() {
                 </div>
               </div>
             </Reveal>
-            <div className="">
-              <Reveal>
-                <h2 className="h2_text mb-6">
+            <div className="flex xl:block flex-col justify-center items-center mx-auto">
+              <Reveal >
+                <h2 className="h2_text mb-6 text-center xl:text-left">
                   A Complete <span className="highlight"> CMS </span> <br /> Platform to Power <br /> Your Digital Universe
                 </h2>
               </Reveal>
               <Reveal>
-                <p className="text-[1rem] mb-8">
+                <p className="text-[1rem] mb-8 text-center xl:text-left">
                   Display Lab offers complete digital signage solutions, from CMS to hardware and displays. Simple, scalable tools to communicate and engage across any number of screens. Our platform is designed for ease of use, allowing you to manage content effortlessly in real time. Whether for retail, corporate, or public spaces, we help you deliver impactful visual experiences that captivate your audience.
                 </p>
               </Reveal>

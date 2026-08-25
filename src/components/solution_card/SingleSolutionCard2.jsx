@@ -8,7 +8,7 @@ function SingleSolutionCard2({ card }) {
       <Link
         href={card.link}
         target="_blank"
-        className="group relative bg-white rounded-xl p-8 shadow-sm overflow-hidden h-64 flex gap-2 flex-col justify-center items-center text-center"
+        className="group relative bg-white rounded-xl p-8 shadow-sm overflow-hidden xl:h-64 flex gap-2 flex-col justify-center items-center text-center"
       >
         {/* Front */}
         <Image src={card.icon} alt={card.title} width={120} height={80} />

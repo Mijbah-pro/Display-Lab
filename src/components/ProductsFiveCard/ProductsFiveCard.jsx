@@ -12,7 +12,7 @@ export default function ProductsFiveCard() {
           <div className="grid gap-4 lg:grid-cols-2">
             
             {/* Card 1: Performance */}
-            <Reveal>
+            <Reveal props={"w-full"}>
             <div className="rounded-2xl bg-slate-50 border border-slate-200 p-8 flex flex-col justify-between min-h-80">
               <div>
                 <h3 className="mt-2 text-4xl font-semibold tracking-tight text-slate-900 text-right mb-5 ">Push to deploy</h3>
@@ -25,7 +25,7 @@ export default function ProductsFiveCard() {
             </Reveal>
 
             {/* Card 2: Releases */}
-            <Reveal>
+            <Reveal props={"w-full"}>
 
             <div className="rounded-2xl bg-slate-50 border border-slate-200 p-8 flex flex-col justify-between min-h-80">
               <div>
@@ -41,7 +41,7 @@ export default function ProductsFiveCard() {
           </div>
 
           {/* Row 2: 3 Columns */}
-          <Reveal>
+          <Reveal props={"w-full"}>
 
           <div className="grid gap-4 lg:grid-cols-3">
             

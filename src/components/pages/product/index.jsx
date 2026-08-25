@@ -1,19 +1,19 @@
 "use client";
-import { useState, useEffect } from "react";
-import NavberMain from "@/components/NavberMain";
-import Products from "./components/Products";
 import Footer from "@/components/footer";
-import Accessories from "./components/Accessories";
-import ProductLines from "./components/ProductLines";
-import NeedHelp from "./components/NeedHelp";
-import ReadyToUpgrade from "./components/ReadyToUpgrade";
-import MindMap from "./components/MindMap";
-import PowerfulResult from "./components/PowerfulResult";
+import NavberMain from "@/components/NavberMain";
 import ProductCetagoryImage from "@/components/productCetagoryImage";
-import ServingBusiness from "./components/Serving_Business";
+import { useEffect, useState } from "react";
+import Accessories from "./components/Accessories";
 import ControlEveryScreen from "./components/ControlEveryScreen";
+import MindMap from "./components/MindMap";
 import NeedContentToo from "./components/NeedContentToo";
+import NeedHelp from "./components/NeedHelp";
+import PowerfulResult from "./components/PowerfulResult";
 import Prduct_Hero from "./components/Product_Hero";
+import ProductLines from "./components/ProductLines";
+import Products from "./components/Products";
+import ReadyToUpgrade from "./components/ReadyToUpgrade";
+import ServingBusiness from "./components/Serving_Business";
 
 
 function Product() {

@@ -4,7 +4,7 @@ import Reveal from "../utils/Reveal";
 
 function CustomerReviews() {
   return (
-    <div className="py-16 md:py-24 bg-gray-50">
+    <div className="pt-16 md:pt-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4">
         {/* Counter Section */}
         {/* <CustomerCounting /> */}
