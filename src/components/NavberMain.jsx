@@ -59,8 +59,7 @@ function NavberMain() {
                   <div className="menu_main flex items-center mx-auto">
                     {navData
                       .filter(
-                        (item) => !item.onlyOn || item.onlyOn === pathName,
-                      )
+                        (item) => !item.onlyOn || item.onlyOn.includes(pathName))
                       .map((singleNav, index) => (
                         <Link
                           key={index}

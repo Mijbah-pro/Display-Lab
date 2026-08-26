@@ -1,14 +1,15 @@
-export const adminTemplate = ({
+export const adminSingleProductInquiryTemplate = ({
   fullName,
   phone,
   email,
+  inquiryType,
+  products,
+  productType,
   businessName,
   businessType,
   locations,
   timeline,
-  inquiryType,
   quantity,
-  products,
   message,
 }) => {
     return `
@@ -108,6 +109,14 @@ export const adminTemplate = ({
         <span style="color:#666;">${businessType}</span>
         </td>
         </tr>
+
+         <tr>
+        <td style="padding:15px;border-top:1px solid #ececec;">
+        <strong>Timeline</strong><br>
+        <span style="color:#666;">${productType}</span>
+        </td>
+        </tr>
+
 
         <tr>
         <td style="padding:15px;border-top:1px solid #ececec;">

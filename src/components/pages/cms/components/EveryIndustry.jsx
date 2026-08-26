@@ -7,7 +7,7 @@ import { IoRestaurantSharp, IoSchool } from "react-icons/io5";
 import { MdEvent, MdOutlineHomeWork } from "react-icons/md";
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
-function DEVICE_SECTION() {
+function EveryIndustry() {
   const devices = [
     {
       icon: <MdOutlineHomeWork size={40} />,
@@ -55,7 +55,7 @@ function DEVICE_SECTION() {
       <div className="space-large"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <Reveal props={"w-full"}>
-          <div className="max-w-3xl mx-auto flex flex-col items-center mb-8">
+          <div className="max-w-3xl mx-auto flex flex-col items-center mb-8 py-16">
             <div className="image">
               <Image
                 src={"/images/rental/rental.png"}
@@ -107,4 +107,4 @@ function DEVICE_SECTION() {
   );
 }
 
-export default DEVICE_SECTION;
+export default EveryIndustry;

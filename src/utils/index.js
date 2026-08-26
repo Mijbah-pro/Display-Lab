@@ -18,7 +18,7 @@ export const navData = [
   {
     navTab: "PRICE",
     navLink: "/price",
-    onlyOn: "/cms",
+    onlyOn: ["/cms","/price"],
   },
 ];
 export const heroSectionLink = [

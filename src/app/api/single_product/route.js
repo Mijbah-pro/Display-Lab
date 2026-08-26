@@ -1,11 +1,12 @@
+import { adminSingleProductInquiryTemplate } from "@/emails/single_product/adminSingleProductInquiryTemplate";
+import { customerSingleProductInquiryTemplate } from "@/emails/single_product/customerSingleProductInquiryTemplate";
 import { NextResponse } from "next/server";
-import { adminTemplate } from "../../../emails/single_product/adminTemplate";
-import { customerTemplate } from "../../../emails/single_product/customerTemplate";
 import { transporter } from "../../../lib/mail";
 
 export async function POST(req) {
   try {
     const data = await req.json();
+console.log(data, "data Si");
 
     const { fullName, email } = data;
 
@@ -18,7 +19,7 @@ export async function POST(req) {
       to: process.env.SMTP_USER,
       replyTo: email,
       subject: `Product Inquiry from ${fullName}`,
-      html: adminTemplate(data),
+      html: adminSingleProductInquiryTemplate(data),
     });
 
     // Send Customer Confirmation Email
@@ -27,7 +28,7 @@ export async function POST(req) {
       to: email,
       replyTo: process.env.SMTP_USER,
       subject: "We've Received Your Inquiry – We'll Be in Touch Soon",
-      html: customerTemplate(data),
+      html: customerSingleProductInquiryTemplate(data),
     });
 
     return NextResponse.json({

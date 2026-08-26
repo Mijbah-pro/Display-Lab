@@ -1,22 +1,15 @@
 "use client";
+import { contactSchema } from '@/schema/inquirySchema';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useMutation } from '@tanstack/react-query';
 import { useForm } from 'react-hook-form';
-import { z } from 'zod';
+import toast from 'react-hot-toast';
+import Loader from '../Loader';
 
-// Dummy arrays for selects
+// Datas
 const businessTypes = [  "QSR", "Fast Food", "Pizza Shop", "Café", "Food Court", "Other",];
 const inquiryTypes = [ "General Question","Request a Quote", "Product Inquiry","Schedule a Demo", "Support", "Partnership",];
 
-// 1. Zod Validation Schema matching all your fields
-const contactSchema = z.object({
-  name: z.string().min(2, 'Name is required'),
-  email: z.string().email('Invalid email address'),
-  businessName: z.string().min(1, 'Business name is required'),
-  businessType: z.string().min(1, 'Please select a business type'),
-  inquiryType: z.string().min(1, 'Please select an inquiry type'),
-  message: z.string().min(10, 'Message must be at least 10 characters'),
-});
 
 // API Call Function
 const submitInquiryAPI = async (formData) => {
@@ -39,13 +32,13 @@ function ContactUsForm() {
   const mutation = useMutation({
     mutationFn: submitInquiryAPI,
     onSuccess: (data) => {
-      console.log('Submitted successfully:', data);
-      alert('Inquiry sent!');
+      // console.log('Submitted successfully:', data);
+      toast.success("✅ Product Inquiry Successful");
       reset();
     },
     onError: (error) => {
-      console.error('Submission error:', error);
-      alert('Failed to send inquiry.');
+      // console.error('Submission error:', error);
+      toast.error("Something went wrong");
     },
   });
 
@@ -65,6 +58,7 @@ function ContactUsForm() {
       inquiryType: '',
       message: '',
     },
+     mode: "all"
   });
 
   // 4. Form Submit Handler
@@ -274,13 +268,18 @@ function ContactUsForm() {
                     <button
                       type="submit"
                       disabled={mutation.isPending}
-                      className="w-full py-3 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 disabled:bg-gray-400"
+                      className="w-full py-3 bg-gradient-to-r from-[#005582] to-[#185d83] text-white font-medium rounded-md disabled:bg-gray-400"
                     >
                       {mutation.isPending ? "Sending..." : "Submit Inquiry"}
                     </button>
                   </form>
                 </div>
               </div>
+                  {mutation.isPending && (
+                    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/30">
+                      <Loader />
+                    </div>
+                  )}
             </div>
           </div>
     

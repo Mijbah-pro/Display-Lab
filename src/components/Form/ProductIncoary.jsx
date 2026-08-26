@@ -2,6 +2,7 @@
 import { inquirySchema } from "@/schema/inquirySchema";
 import { AllTypesProductsDatas, businessTypes, locations, productTypes, screenSizes } from "@/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useMutation } from "@tanstack/react-query";
 import { ChevronLeft, ChevronRight } from "lucide-react"; // Or use any icon library (e.g. react-icons)
 import Image from "next/image";
 import { useState } from "react";
@@ -11,9 +12,10 @@ import 'swiper/css';
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Products from "../products/products";
+import Loader from "../Loader";
 
 export default function ProductIncoary({ onClose }) {
-  const [productInquiry, setProductInquiry] = useState(false)
+  // const [productInquiry, setProductInquiry] = useState(false)
   // Ensure productTypes array exists before initializing form
   const defaultProductType = productTypes[0] || "";
 
@@ -23,7 +25,7 @@ export default function ProductIncoary({ onClose }) {
     register,
     handleSubmit,
     reset,
-    formState: { errors, isDirty, isValid, isSubmitting, },
+    formState: { errors },
   } = useForm({
     resolver: zodResolver(inquirySchema),
     defaultValues: {
@@ -53,41 +55,38 @@ export default function ProductIncoary({ onClose }) {
       )?.products
       : ProductItems;
 
-  //     const mutation = useMutation({
-  //     mutationFn: async (data) => {
-  //       const res = await fetch("/api/contact", {
-  //         method: "POST",
-  //         headers: {
-  //           "Content-Type": "application/json",
-  //         },
-  //         body: JSON.stringify(data),
-  //       });
+      const mutation = useMutation({
+      mutationFn: async (data) => {
+        const res = await fetch("/api/product_inquiry", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        });
 
-  //       if (!res.ok) throw new Error("Failed");
+        if (!res.ok) throw new Error("Failed");
 
-  //       return res.json();
-  //     },
+        return res.json();
+      },
 
-  //     onSuccess: () => {
-  //       toast.success("✅ Product Inquiry Successful");
-  //       reset();
-  //       onClose?.();
-  //     },
+      onSuccess: () => {
+        toast.success("✅ Product Inquiry Successful");
+        reset();
+        onClose?.();
+      },
 
-  //     onError: () => {
-  //       toast.error("Something went wrong");
-  //     },
-  //   });
+      onError: () => {
+        toast.error("Something went wrong");
+      },
+    });
   const onSubmit = (data) => {
-    console.log(data);
-    toast.success("✅ Product Inquiry Successful");
-    reset()
-
-    // mutation.mutate(data);
+    mutation.mutate(data);
   };
 
 
   return (
+    <>
     <div className="grid w-full max-h-[700px]  max-w-4xl overflow-y-scroll rounded-[28px] bg-white shadow-2xl md:grid-cols-[280px_1fr]">
       {/* Left panel */}
       <div className="relative flex flex-col justify-between bg-[#005582] px-7 py-8 text-white md:px-8 md:py-10">
@@ -469,5 +468,15 @@ export default function ProductIncoary({ onClose }) {
         </form>
       </div>
     </div>
+    
+    
+        {mutation.isPending && (
+          <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/30">
+            <Loader />
+          </div>
+        )}
+    
+    
+    </>
   );
 }

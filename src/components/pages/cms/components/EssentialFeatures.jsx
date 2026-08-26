@@ -1,8 +1,8 @@
 import Reveal from "@/components/utils/Reveal";
 import Link from "next/link";
 
-function LeadingFeatures() {
-  const leadingFeatureDataList = [
+function EssentialFeatures() {
+  const essentialFeaturesDataList = [
     {
       img: "/images/cms/Simple-&-User-Friendly.jpg",
       title: "Simple & User-Friendly",
@@ -40,10 +40,10 @@ function LeadingFeatures() {
           </h2>
         </div>
         <div className="space-y-20 md:space-y-32">
-          {leadingFeatureDataList?.map((singleLeadingFeature, index) => (
+          {essentialFeaturesDataList?.map((singleLeadingFeature, index) => (
             <div
               key={index}
-              className={`grid lg:grid-cols-2 gap-8 md:gap-12 items-center ${index % 2 == 1 ? "lg:grid-flow-dense" : ""}`}
+              className={`grid lg:grid-cols-2 gap-8 md:gap-12 items-center ${index % 2 == 1 ? "lg:grid-flow-dense xl:[direction:rtl]" : ""}`}
             >
               <Reveal>
               <div
@@ -63,7 +63,7 @@ function LeadingFeatures() {
               <div
                 className={`${index % 2 == 1 ? "lg:col-start-1 lg:row-start-1" : ""}`}
               >
-                <div className="">
+                <div className="text-left">
                   <p className="text-cyan-600 font-semibold text-sm uppercase tracking-wide mb-3">
                     {singleLeadingFeature?.subTitle}
                   </p>
@@ -108,4 +108,4 @@ function LeadingFeatures() {
   );
 }
 
-export default LeadingFeatures;
+export default EssentialFeatures;

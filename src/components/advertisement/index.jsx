@@ -22,7 +22,7 @@ function Advertisement_Solutions() {
                       repeat: Infinity,
                       ease: "linear",
                     }}
-                    className="bg-white rounded-2xl shadow-2xl p-4 relative z-10"
+                    className="bg-white rounded-2xl shadow-[0px_5px_15px_rgba(0,0,0,0.35)] p-4 relative z-10"
                   >
                     <video
                       className="rounded-xl aspect-video w-full h-full object-cover"
@@ -31,7 +31,7 @@ function Advertisement_Solutions() {
                       muted
                       preload="none"
                     >
-                      <source src="https://cdn.pickcel.com/videos/main/hero-video.hMW0RsrCv5Su.webm" />
+                      <source src="/videos/Smart-Digital-Advertising-Solutions.mp4" />
                     </video>
                   </div>
                 </div>

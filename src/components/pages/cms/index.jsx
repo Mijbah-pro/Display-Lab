@@ -2,17 +2,17 @@ import Benefits from "@/components/cms_tab/Benefits";
 import FAQ from "@/components/faq/faq";
 import NavberMain from "@/components/NavberMain";
 import { cmsFaqsData } from "@/utils";
-import DEVICE_SECTION from "./components/DeviceSection";
 import DigitalSignage from "./components/Digital Signage";
 import GetStarted from "./components/GetStarted";
 import CMS_HERO from "./components/hero";
-import LeadingFeatures from "./components/LeadingFeatures";
 import { HeroVideoDialogDemo } from "./components/Video_Section";
 import WHY_SECTION2 from "./components/WHY_SECTION2";
 import MobileApp from "./components/MobileApp";
 import Gallery from "@/components/gallery";
 import Footer from "@/components/footer";
 import CurvedLoop from "@/components/CurvedLoop/CurvedLoop";
+import EssentialFeatures from "./components/EssentialFeatures";
+import EveryIndustry from "./components/EveryIndustry";
 
 
 function CMS() {
@@ -22,7 +22,7 @@ function CMS() {
       <div className="main_div">
         <CMS_HERO />
         <GetStarted />
-        <LeadingFeatures />
+        <EssentialFeatures />
         <Benefits />
         <CurvedLoop
           marqueeText="Display Lab ✦ Creative ✦ With ✦ Digital ✦ Business ✦"
@@ -34,7 +34,7 @@ function CMS() {
           />
         <HeroVideoDialogDemo />
         <WHY_SECTION2 />
-        <DEVICE_SECTION />
+        <EveryIndustry />
         <DigitalSignage />
         {/* <MobileApp /> */}
         <Gallery />

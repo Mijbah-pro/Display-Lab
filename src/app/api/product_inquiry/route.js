@@ -1,5 +1,6 @@
+import { adminProductInquiryTemplate } from "@/emails/product_inquiry/adminProductInquiryTemplate";
+import { customerProductInquiryTemplate } from "@/emails/product_inquiry/customerProductInquiryTemplate";
 import { NextResponse } from "next/server";
-import { adminTemplate } from "../../../emails/product_inquiry/adminTemplate";
 import { transporter } from "../../../lib/mail";
 
 export async function POST(req) {
@@ -17,17 +18,17 @@ export async function POST(req) {
       to: process.env.SMTP_USER,
       replyTo: email,
       subject: `Product Inquiry from ${fullName}`,
-      html: adminTemplate(data),
+      html: adminProductInquiryTemplate(data),
     });
 
     // Send Customer Confirmation Email
-    // await transporter.sendMail({
-    //   from: `Display Lab <${process.env.SMTP_USER}>`,
-    //   to: email,
-    //   replyTo: process.env.SMTP_USER,
-    //   subject: "We've Received Your Inquiry – We'll Be in Touch Soon",
-    //   html: customerTemplate(data),
-    // });
+    await transporter.sendMail({
+      from: `Display Lab <${process.env.SMTP_USER}>`,
+      to: email,
+      replyTo: process.env.SMTP_USER,
+      subject: "We've Received Your Inquiry – We'll Be in Touch Soon",
+      html: customerProductInquiryTemplate(data),
+    });
 
     return NextResponse.json({
       success: true,

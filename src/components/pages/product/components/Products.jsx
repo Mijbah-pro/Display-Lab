@@ -5,6 +5,8 @@ import { ProductsDatas } from "@/utils";
 import {
   Box,
   Calendar,
+  ChevronLeft,
+  ChevronRight,
   ClipboardList,
   CloudDrizzle,
   Grid2X2,
@@ -16,6 +18,9 @@ import {
   Tablet
 } from "lucide-react";
 import { useEffect, useState } from "react";
+import { Navigation } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+
 
 
 const TOP_CATEGORIES = [
@@ -129,6 +134,70 @@ function Products({ selectedCategory: propSelectedCategory, setSelectedCategory:
               </Reveal>
 
               {/* Bottom row: Other Categories */}
+              {/* Mobile screen */}
+              <div className="w-full md:hidden">
+              <Reveal props={"w-full"}>
+                  <div className="relative w-full bg-white rounded-2xl shadow-[0_4px_25px_rgba(0,0,0,0.06)] border border-slate-100 p-2">
+                    
+                    {/* Left Button */}
+                    <button
+                      className="category-prev absolute left-2 top-1/2 -translate-y-1/2 z-10
+                        w-9 h-9 rounded-full bg-white shadow-md border border-slate-200
+                        flex items-center justify-center text-slate-600
+                        hover:bg-cyan-50 hover:text-cyan-600 transition-all"
+                    >
+                      <ChevronLeft size={20} />
+                    </button>
+
+                    {/* Swiper */}
+                    <Swiper
+                      modules={[Navigation]}
+                      navigation={{
+                        prevEl: ".category-prev",
+                        nextEl: ".category-next",
+                      }}
+                      spaceBetween={10}
+                      slidesPerView="auto"
+                      className="category-swiper !px-10"
+                    >
+                      {CATEGORIES.map((cat) => {
+                        const Icon = cat.icon;
+                        const isActive = selectedCategory === cat.id;
+
+                        return (
+                          <SwiperSlide key={cat.id} className="!w-auto">
+                            <button
+                              onClick={() => handleCategorySelect(cat.id)}
+                              className={`flex items-center gap-2.5 px-5 py-3 rounded-xl text-sm font-semibold transition-all duration-200 cursor-pointer shrink-0 ${
+                                isActive
+                                  ? "bg-cyan-600 text-white shadow-md shadow-cyan-600/20"
+                                  : "bg-cyan-50 text-slate-600 hover:bg-cyan-100"
+                              }`}
+                            >
+                              <Icon size={18} />
+                              <span>{cat.label}</span>
+                            </button>
+                          </SwiperSlide>
+                        );
+                      })}
+                    </Swiper>
+
+                    {/* Right Button */}
+                    <button
+                      className="category-next absolute right-2 top-1/2 -translate-y-1/2 z-10
+                        w-9 h-9 rounded-full bg-white shadow-md border border-slate-200
+                        flex items-center justify-center text-slate-600
+                        hover:bg-cyan-50 hover:text-cyan-600 transition-all"
+                    >
+                      <ChevronRight size={20} />
+                    </button>
+
+                  </div>
+              </Reveal>
+              </div>
+              {/* Desktop screen */}
+              <div className="hidden md:block">
+
               <Reveal props={"w-full"}>
                 <div className="w-full bg-white rounded-2xl shadow-[0_4px_25px_rgba(0,0,0,0.06)] border border-slate-100 p-2 overflow-x-auto scrollbar-none grid grid-cols-2 md:flex flex-wrap items-center justify-start lg:justify-center gap-2 md:gap-3">
                   {CATEGORIES.map((cat) => {
@@ -150,6 +219,7 @@ function Products({ selectedCategory: propSelectedCategory, setSelectedCategory:
                   })}
                 </div>
               </Reveal>
+              </div>
             </div>
           
           {/* Dynamic Product Grid */}

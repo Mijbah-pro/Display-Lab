@@ -1,14 +1,9 @@
-export const adminTemplate = ({
-  fullName,
-  phone,
+export const adminContactTemplate = ({
+  name,
   email,
   businessName,
   businessType,
-  locations,
-  productType,
-  screenSize,
-  quantity,
-  products,
+  inquiryType,
   message,
 }) => {
     return `
@@ -31,7 +26,7 @@ export const adminTemplate = ({
         <tr>
         <td align="center" style="background:#1f4e79;padding:35px 30px;">
         <h1 style="margin:0;color:#ffffff;font-size:30px;font-weight:bold;">
-        Follow-Up Required: Product Inquiry Received
+        Follow-Up Required: Contact Us
         </h1>
 
         <p style="margin:10px 0 0;color:#d8e6f5;font-size:15px;">
@@ -59,7 +54,7 @@ export const adminTemplate = ({
         <tr>
         <td style="padding:15px;border-top:1px solid #ececec;">
         <strong>Full Name</strong><br>
-        <span style="color:#666;">${fullName}</span>
+        <span style="color:#666;">${name}</span>
         </td>
         </tr>
 
@@ -69,13 +64,6 @@ export const adminTemplate = ({
         <a href="mailto:${email}" style="color:#2563eb;text-decoration:none;">
         ${email}
         </a>
-        </td>
-        </tr>
-
-        <tr>
-        <td style="padding:15px;border-top:1px solid #ececec;">
-        <strong>Phone</strong><br>
-        <span style="color:#666;">${phone}</span>
         </td>
         </tr>
 
@@ -108,21 +96,6 @@ export const adminTemplate = ({
         <span style="color:#666;">${businessType}</span>
         </td>
         </tr>
-
-        <tr>
-        <td style="padding:15px;border-top:1px solid #ececec;">
-        <strong>Locations</strong><br>
-        <span style="color:#666;">${locations}</span>
-        </td>
-        </tr>
-
-        <tr>
-        <td style="padding:15px;border-top:1px solid #ececec;">
-        <strong>Timeline</strong><br>
-        <span style="color:#666;">${productType}</span>
-        </td>
-        </tr>
-
         </table>
 
         </td>
@@ -150,24 +123,8 @@ export const adminTemplate = ({
         <table width="100%" cellpadding="8" cellspacing="0">
 
         <tr>
-        <td width="40%"><strong>Screen Size</strong></td>
-        <td>${screenSize}</td>
-        </tr>
-
-        // <tr>
-        // <td><strong>Required Quantity</strong></td>
-        // <td>${quantity}</td>
-        // </tr>
-
-        <tr>
-        <td valign="top"><strong>Products</strong></td>
-        <td>
-        ${
-        Array.isArray(products)
-            ? products.map(product => `• ${product}`).join("<br>")
-            : products || "N/A"
-        }
-        </td>
+        <td width="40%"><strong>Inquiry Type</strong></td>
+        <td>${inquiryType}</td>
         </tr>
 
         </table>

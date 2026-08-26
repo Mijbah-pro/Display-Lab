@@ -75,17 +75,16 @@ export default function SingleProductInquiry({ Product, onClose }) {
   });
 
   const onSubmit = (data) => {
-
+    console.log(data , "data");
+    
     mutation.mutate(data);
   };
   const ProductItems = Product?.product_items || [];
-  const currentProducts =
-    productTypetext &&
-      AllTypesProductsDatas.find((item) => item.productsType === productTypetext)
-      ? AllTypesProductsDatas.find(
-        (item) => item.productsType === productTypetext
-      )?.products
-      : ProductItems;
+const matchedType = AllTypesProductsDatas.find(
+  (item) => item.productsType === productTypetext
+);
+
+const currentProducts = matchedType?.products || ProductItems;
 
   return (<>
     <div className="grid w-full max-h-[700px]  max-w-4xl overflow-y-scroll rounded-[28px] bg-white shadow-2xl md:grid-cols-[280px_1fr]">
@@ -433,7 +432,7 @@ export default function SingleProductInquiry({ Product, onClose }) {
                     <SwiperSlide key={item.id || index} className="!w-auto">
                       <div>
                         <input
-                          id={`product${index + 1}`}
+                          id={`product-${item.id || item.name}`}
                           name="products"
                           {...register("products")}
                           value={item.name}
@@ -442,7 +441,7 @@ export default function SingleProductInquiry({ Product, onClose }) {
                         />
 
                         <label
-                          htmlFor={`product${index + 1}`}
+                           htmlFor={`product-${item.id || item.name}`}
                           className="block cursor-pointer rounded-lg border-2 border-gray-200 p-1 transition-all peer-checked:border-blue-500 peer-checked:bg-blue-50/50"
                         >
                           <Image

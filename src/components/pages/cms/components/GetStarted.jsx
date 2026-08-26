@@ -78,7 +78,7 @@ function GetStarted() {
       ),
       title: "Publish to Your Screens",
       description:
-        "Schedule and publish your content instantly across all connected displays.Control what appears on each screen with precision and ease.Deliver real-time updates to keep your audience informed and engaged.",
+        "Schedule and publish your content instantly across all connected displays.Control what appears on each screen with precision and ease.Deliver real-time updates to keep your audience informed and engaged.                   ",
     },
   ];
   return (
@@ -99,7 +99,7 @@ function GetStarted() {
           {getStartedStap.map((singleStartedStap, index) => (
             <div className={`group relative `} key={index}>
               <Reveal props={"w-full"}>
-              <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all h-full relative overflow-hidden group">
+              <div className={`bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all ${index % 3 === 2 ? "md:pb-16": ""} h-full relative overflow-hidden group`}>
                 <div
                   className={`absolute inset-0 bg-linear-to-br ${singleStartedStap?.cardColor} opacity-0 group-hover:opacity-5 transition-opacity`}
                 ></div>

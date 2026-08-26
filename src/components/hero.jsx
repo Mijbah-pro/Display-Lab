@@ -73,7 +73,7 @@ function Hero() {
             <div className="relative">
               <div
                 className="relative">
-                <div className=" rounded-2xl border border-gray-200 bg-white p-4  shadow-2xl relative z-10">
+                <div className=" rounded-2xl border border-gray-200 bg-white p-4  shadow-[0px_5px_15px_rgba(0,0,0,0.35)] relative z-10">
                   <video
                     className="aspect-video w-full rounded-xl object-cover"
                     autoPlay

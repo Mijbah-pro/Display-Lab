@@ -69,16 +69,40 @@ function Footer() {
   ]
   const quickLinksIndustrys = [
     {
-      name: "Education",
+      name: "Restaurants",
+      href: "/cms/restaurant",
+    },
+    {
+      name: "Grocey",
+      href: "/cms/grocery",
+    },
+    {
+      name: "Retail",
       href: "#",
+    },
+    {
+      name: "Education",
+      href: "/cms/education",
     },
 
+    // {
+    //   name: "Offices",
+    //   href: "#",
+    // },
     {
-      name: "Hospital",
+      name: "Government",
       href: "#",
     },
     {
-      name: "Restaurants",
+      name: "Religious Venues",
+      href: "#",
+    },
+    {
+      name: "Manufacturing",
+      href: "#",
+    },
+    {
+      name: "Hospital",
       href: "#",
     },
     {

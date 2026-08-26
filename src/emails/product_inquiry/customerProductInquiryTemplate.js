@@ -1,4 +1,4 @@
-export const customerTemplate = ({
+export const customerProductInquiryTemplate = ({
   fullName,
   businessName,
   inquiryType,
@@ -7,7 +7,7 @@ export const customerTemplate = ({
   businessType,
   timeline,
 }) => {
-    return `
+  return `
     <!DOCTYPE html
     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -153,7 +153,13 @@ background-color: #f3f3f3;
 
                 <tr>
                     <td style="font-weight:bold;">Products</td>
-                    <td>${products}</td>
+                    <td> ${
+                      Array.isArray(products)
+                        ? products
+                            .map((product) => `• ${product}`)
+                            .join(",<br>")
+                        : products || "N/A"
+                    }</td>
                 </tr>
 
                 <tr style="background:#f7f9fc;">
@@ -300,5 +306,5 @@ background-color: #f3f3f3;
 </body>
 
 </html>
-    `
-}
+    `;
+};

@@ -11,6 +11,7 @@ import NavberMain from "@/components/NavberMain";
 import ProductSection from "@/components/product";
 import ProductsFiveCard from "@/components/ProductsFiveCard/ProductsFiveCard";
 import ProductSlider from "@/components/productsSlider/productSlider";
+import ProductVideo from "@/components/productVideo/productVideo";
 import Rental2 from "@/components/rental2";
 import SolutionCard from "@/components/solution_card";
 import { homeFaqsData } from "@/utils";
@@ -26,7 +27,8 @@ export default function Home() {
         <Gallery />
         <ProductSection />
         <ProductsFiveCard />
-        <ProductSlider />
+        {/* <ProductSlider /> */}
+        <ProductVideo />
         <Advertisement_Solutions />
 
         {/* <RentalProducts /> */}
