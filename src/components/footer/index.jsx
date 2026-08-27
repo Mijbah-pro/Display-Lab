@@ -34,6 +34,10 @@ function Footer() {
       name: "Advertisement",
       href: "/advertisement"
     },
+    {
+      name: "Blog",
+      href: "/blog"
+    },
   ]
   const quickLinksProducts = [
     {
