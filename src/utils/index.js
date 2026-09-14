@@ -261,7 +261,7 @@ export const adsCardDatas = [
     ads_card_description:
       "Engage shoppers with dynamic ads and targeted messaging on high traffic displays to boost reach and influence purchases",
     ads_card_link_text: "See More",
-    ads_card_link_address: "/",
+    ads_card_link_address: "/advertisement",
     product_name: ["Indoor Display"],
   },
   {
@@ -270,7 +270,7 @@ export const adsCardDatas = [
     ads_card_description:
       "Provide patients and visitors with realtime information directions and health updates through digital signage spaces.",
     ads_card_link_text: "See More",
-    ads_card_link_address: "/",
+    ads_card_link_address: "/advertisement",
     product_name: ["Presentation Display"],
   },
   {
@@ -279,7 +279,7 @@ export const adsCardDatas = [
     ads_card_description:
       "Highlight promotions, discounts, and featured products with digital signage to boost visibility, engage shoppers, and drive in-store sales.",
     ads_card_link_text: "See More",
-    ads_card_link_address: "/",
+    ads_card_link_address: "/advertisement",
     product_name: ["Digital Menu Board"],
   },
   {
@@ -288,7 +288,7 @@ export const adsCardDatas = [
     ads_card_description:
       "Keep passengers informed with realtime flight updates while displaying to enhance experience and maximize visibility.",
     ads_card_link_text: "See More",
-    ads_card_link_address: "/",
+    ads_card_link_address: "/advertisement",
     product_name: [],
   },
   {
@@ -297,7 +297,7 @@ export const adsCardDatas = [
     ads_card_description:
       "Deliver real-time travel updates and navigation info with digital displays while enabling brands to reach thousands of daily commuters.",
     ads_card_link_text: "See More",
-    ads_card_link_address: "/",
+    ads_card_link_address: "/advertisement",
     product_name: [],
   },
   {
@@ -306,7 +306,7 @@ export const adsCardDatas = [
     ads_card_description:
       "Maximize visibility in high traffic areas using digital signage to deliver targeted ads and grow revenue for businesses.",
     ads_card_link_text: "See More",
-    ads_card_link_address: "/",
+    ads_card_link_address: "/advertisement",
     product_name: [],
   },
 ];

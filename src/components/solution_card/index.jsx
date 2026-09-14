@@ -1,5 +1,6 @@
 "use client";
 import Reveal from "../utils/Reveal";
+import Video from "../Video";
 import SingleSolutionCard2 from "./SingleSolutionCard2";
 
 function SolutionCard() {
@@ -76,15 +77,8 @@ function SolutionCard() {
                   }}
                   className="bg-white rounded-2xl shadow-[0px_5px_15px_rgba(0,0,0,0.35)] p-4 relative z-10"
                 >
-                  <video
-                    className="rounded-xl aspect-video w-full h-full object-cover"
-                    autoPlay
-                    loop
-                    muted
-                    preload="none"
-                  >
-                    <source src="/videos/Powerful_Tools_Section.mp4" />
-                  </video>
+                  
+                  <Video src="/videos/Powerful_Tools_Section.mp4" />
                 </div>
               </div>
             </div>

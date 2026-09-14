@@ -99,7 +99,7 @@ function Products({ selectedCategory: propSelectedCategory, setSelectedCategory:
         <div className="flex flex-col gap-8 ">
           <Reveal props={"w-full"}>
             <div className="flex flex-col gap-4">
-              <h1 className="title text-center text-gray-900">Display Lab Products</h1>
+              <h2 className="title text-center text-gray-900">Display Lab Products</h2>
               <p className="section_desc text-center max-w-2xl mx-auto text-gray-600">
                 Explore our range of digital signage displays for various applications.
               </p>

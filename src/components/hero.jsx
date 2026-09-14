@@ -6,6 +6,7 @@ import ClientLogoSlider from "@/components/client_logo_slider";
 import { home_hero_logos } from "@/utils";
 import CalandlyButton from "./calandlyButton";
 import Reveal from "./utils/Reveal";
+import Video from "./Video";
 
 function Hero() {
   return (
@@ -74,8 +75,8 @@ function Hero() {
               <div
                 className="relative">
                 <div className=" rounded-2xl border border-gray-200 bg-white p-4  shadow-[0px_5px_15px_rgba(0,0,0,0.35)] relative z-10">
-                  <video
-                    className="aspect-video w-full rounded-xl object-cover"
+                  {/* <video
+                    className="aspect-video w-full rounded-xl object-cover pointer-events-none"
                     autoPlay
                     loop
                     muted
@@ -83,7 +84,8 @@ function Hero() {
                     preload="none"
                   >
                     <source src="/videos/hero.mp4" type="video/mp4" />
-                  </video>
+                  </video> */}
+                  <Video src="/videos/hero.mp4" />
                 </div>
               </div>
             </div>

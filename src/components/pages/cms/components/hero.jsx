@@ -2,6 +2,7 @@
 
 import CalandlyButton from "@/components/calandlyButton";
 import Reveal from "@/components/utils/Reveal";
+import Video from "@/components/Video";
 import { motion } from "motion/react";
 import Link from "next/link";
 import Script from "next/script";
@@ -39,15 +40,8 @@ function CMS_HERO() {
                   }}
                   className="bg-white rounded-2xl shadow-[0px_5px_15px_rgba(0,0,0,0.35)] p-4 relative z-10"
                 >
-                  <video
-                    className="rounded-xl aspect-video w-full h-full object-cover"
-                    autoPlay
-                    loop
-                    muted
-                    preload="none"
-                  >
-                    <source src="/videos/Powerful_Tools_Section.mp4" />
-                  </video>
+                 
+                <Video src="/videos/Powerful_Tools_Section.mp4" />
                 </motion.div>
                 <motion.div
                   animate={{

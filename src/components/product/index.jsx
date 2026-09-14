@@ -2,6 +2,7 @@
 
 import "swiper/css";
 import Reveal from "../utils/Reveal";
+import Video from "../Video";
 
 function ProductSection() {
   const productImages = [
@@ -40,15 +41,8 @@ function ProductSection() {
                   }}
                   className="rounded-2xl shadow-[0px_5px_15px_rgba(0,0,0,0.35)] p-4 relative z-10"
                 >
-                  <video
-                    className="rounded-xl aspect-video w-full h-full object-cover"
-                    autoPlay
-                    loop
-                    muted
-                    preload="none"
-                  >
-                    <source src="https://cdn.pickcel.com/videos/main/hero-video.hMW0RsrCv5Su.webm" />
-                  </video>
+                  
+                  <Video src="/videos/Comp1.mp4" />
                 </div>
               </div>
             </div>

@@ -1,0 +1,37 @@
+// app/admin/layout.js
+import { SidebarProvider, SidebarInset, SidebarTrigger } from "@/components/ui/sidebar"
+import { AppSidebar } from "@/components/app-sidebar"
+import { Separator } from "@/components/ui/separator"
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb"
+import { TooltipProvider } from "@/components/ui/tooltip"
+
+export default function AdminLayout({ children }) {
+  return (
+    <TooltipProvider>
+    <SidebarProvider>
+      {/* AppSidebar consumes the context provided by SidebarProvider */}
+      <AppSidebar variant="inset" />
+
+      <SidebarInset>
+        <header className="flex h-16 shrink-0 items-center gap-2 border-b px-4 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12">
+          <div className="flex items-center gap-2">
+            <SidebarTrigger className="-ml-1" />
+            
+          </div>
+        </header>
+
+        <main className="flex flex-1 flex-col gap-4 p-4 pt-0">
+          {children}
+        </main>
+      </SidebarInset>
+    </SidebarProvider>
+    </TooltipProvider>
+  )
+}

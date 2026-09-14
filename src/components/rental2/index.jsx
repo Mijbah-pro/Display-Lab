@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "../utils/Reveal";
+import Video from "../Video";
 
 function Rental2() {
   const rentalProducts = [
@@ -65,15 +66,9 @@ function Rental2() {
                     }}
                     className="bg-white rounded-2xl shadow-[0px_5px_15px_rgba(0,0,0,0.35)] p-4 relative z-10"
                   >
-                    <video
-                      className="rounded-xl aspect-video w-full h-full object-cover"
-                      autoPlay
-                      loop
-                      muted
-                      preload="none"
-                    >
-                      <source src="/videos/Display-Lab-Rental-Products.mp4" />
-                    </video>
+                    
+                    <Video src="/videos/Display-Lab-Rental-Products.mp4" />
+                    
                   </div>
                 </div>
               </div>
@@ -106,7 +101,7 @@ function Rental2() {
                         key={index}
                         className="relative w-full md:w-[50%] overflow-hidden flex flex-col list-none duration-1000 fill-mode-both p-2.5!"
                       >
-                        <div className="opacity-100 overflow-hidden transform-gpu">
+                        <div className="group opacity-100 overflow-hidden transform-gpu">
                           <div className="relative rounded-[10px] w-full overflow-hidden bg-transparent">
                             <Link
                               className="bg-no-repeat bg-center bg-cover! transition-all duration-200 ease-out flex flex-col hover:scale-[1.06]"
@@ -132,7 +127,7 @@ function Rental2() {
                               }}
                               className="flex flex-col relative overflow-hidden z-1 text-[#333] p-[15px] h-full box-border justify-end items-center text-center pointer-events-none cursor-pointer text-base"
                             >
-                              <h3 className="text-white bg-[#3095b5] px-2 py-1 rounded font-bold">
+                              <h3 className="opacity-0 group-hover:opacity-100 text-white bg-[#3095b5] px-2 py-1 rounded font-bold">
                                 {singleProduct?.product_name}
                               </h3>
                             </span>
@@ -143,7 +138,7 @@ function Rental2() {
                   </div>
                   <div className="w-full md:w-[40%] flex flex-col">
                     <div className="relative overflow-hidden p-2.5! list-none duration-1000 fill-mode-both">
-                      <div className="opacity-100 overflow-hidden transform-gpu">
+                      <div className="group opacity-100 overflow-hidden transform-gpu">
                         <div className="bg-transparent w-full overflow-hidden rounded-[10px]! relative">
                           <Link
                             className="flex flex-col transition-all duration-200 ease-out bg-cover bg-no-repeat bg-center hover:scale-[1.06]"
@@ -171,7 +166,7 @@ function Rental2() {
                             }}
                             className="relative z-10 h-full overflow-hidden flex flex-col justify-end items-center text-center pointer-events-none p-4 text-[#333]"
                           >
-                            <h3 className="text-white bg-[#3095b5] px-2 py-1 rounded font-bold">
+                            <h3 className="opacity-0 group-hover:opacity-100 text-white bg-[#3095b5] px-2 py-1 rounded font-bold">
                               Dual screen Kiosk
                             </h3>
                           </span>

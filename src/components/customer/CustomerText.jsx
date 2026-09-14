@@ -71,6 +71,11 @@ function CustomerText() {
     },
   ];
 
+  // 1. Helper function
+const truncateText = (text, maxLength = 20) => {
+  if (!text) return "";
+  return text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
+};
   return (
     <div className="relative group max-w-7xl mx-auto px-4">
       {/* Custom Navigation Buttons */}
@@ -108,7 +113,7 @@ function CustomerText() {
       >
         {reviews.map((review, index) => (
           <SwiperSlide key={index} className="h-auto">
-            <div className="bg-white p-6 rounded-xl shadow-sm border flex flex-col justify-between h-full">
+            <div className="bg-white p-6 rounded-xl shadow-sm border flex flex-col justify-between h-[283px]">
               <div>
                 <img
                   className="h-4 mb-4"
@@ -116,7 +121,7 @@ function CustomerText() {
                   alt="Quote"
                 />
                 <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                  {review.text}
+                  {truncateText(review.text, 160)}
                 </p>
               </div>
 
