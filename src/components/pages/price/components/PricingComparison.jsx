@@ -1,4 +1,5 @@
 import Reveal from "@/components/utils/Reveal";
+import Link from "next/link";
 
 export default function PricingComparison({ plans, billing, symbols, rates, currency, industry = "all" }) {
   const convertPrice = (price) => {
@@ -42,28 +43,28 @@ export default function PricingComparison({ plans, billing, symbols, rates, curr
       feature_section_title: "Content Automation and Integration",
       features: [
         {
-          name: "Scheduling",
+          name: "Display Device",
           cardAllow: [true, true, true],
         },
         {
-          name: "Content Library",
+          name: "Asset Storage",
           cardAllow: [true, true, true],
         },
         {
-          name: "API & Secure Automation",
+          name: "Playlists",
+          cardAllow: [true, true, true],
+        },
+        {
+          name: "Templates",
           cardAllow: [false, true, true],
         },
         {
-          name: "HD Update Automation",
+          name: "Canvas Template Create",
           cardAllow: [false, true, true],
         },
         {
-          name: "Proof of Play",
-          cardAllow: [false, true, true],
-        },
-        {
-          name: "Templates, Format and Orientation",
-          cardAllow: [false, true, true],
+          name: "Works Offline",
+          cardAllow: [true, true, true],
         }
       ]
     },
@@ -71,24 +72,24 @@ export default function PricingComparison({ plans, billing, symbols, rates, curr
       feature_section_title: "Campaign Management & Advanced Playback",
       features: [
         {
-          name: "Advanced Scheduling",
+          name: "4k Resolution Support",
+          cardAllow: [true, true, true],
+        },
+        {
+          name: "Support All Formats",
+          cardAllow: [true, true, true],
+        },
+        {
+          name: "Only Single User",
           cardAllow: [false, true, true],
         },
         {
-          name: "Playlist Management",
-          cardAllow: [false, true, true],
-        },
-        {
-          name: "Conditional Playback",
-          cardAllow: [false, true, true],
-        },
-        {
-          name: "Real-time Updates",
+          name: "Custom User Role",
           cardAllow: [false, false, true],
         },
         {
-          name: "Multi-User Collaboration",
-          cardAllow: [false, false, true],
+          name: "Drag And Drop",
+          cardAllow: [true, false, true],
         },
       ]
     }
@@ -128,15 +129,15 @@ export default function PricingComparison({ plans, billing, symbols, rates, curr
                     {billing === "monthly" ? "/month" : "/year"}
                   </p>
 
-                  <button
-                    className={`mt-3 w-full py-2 rounded-xl text-xs md:text-sm font-semibold transition-all duration-200 ${
+                  <Link href={"https://displaylab.net/signup"} target="_blank"
+                    className={`block mt-3 w-full py-2 rounded-xl text-xs md:text-sm font-semibold transition-all duration-200 cursor-pointer ${
                       isRecommended
                         ? "bg-[#005582] text-white hover:bg-[#004469]"
                         : "bg-gray-100 hover:bg-gray-200 text-gray-700"
                     }`}
                   >
                     Try for Free
-                  </button>
+                  </Link>
                 </div>
               );
             })}

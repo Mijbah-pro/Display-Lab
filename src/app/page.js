@@ -13,7 +13,7 @@ import ProductsFiveCard from "@/components/ProductsFiveCard/ProductsFiveCard";
 import ProductSlider from "@/components/productsSlider/productSlider";
 import ProductVideo from "@/components/productVideo/productVideo";
 import Rental2 from "@/components/rental2";
-import SolutionCard from "@/components/solution_card";
+import Powerful_Tools_To_Run from "@/components/solution_card";
 import { homeFaqsData } from "@/utils";
 export default function Home() {
   return (
@@ -23,7 +23,7 @@ export default function Home() {
         <Hero />
         <DigitalSignageSolutions />
         <CMS_Marketing />
-        <SolutionCard />
+        <Powerful_Tools_To_Run />
         <Gallery />
         <ProductSection />
         <ProductsFiveCard />

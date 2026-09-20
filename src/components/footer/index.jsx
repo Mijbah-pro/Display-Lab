@@ -242,7 +242,7 @@ function Footer() {
                             {link.name}
                           </Link>
                         ))} */}
-                        <Link href="/careers" className="border-[1.5px] border-[#3095b5] bg-[#3095b5] text-white text-center capitalize whitespace-nowrap rounded flex justify-center items-center px-6 py-[.4rem] text-base font-medium leading-[180%] transition-colors duration-200 hover:text-black">
+                        <Link href="https://displaylab.net/signup" target="_blank" className="border-[1.5px] border-[#3095b5] bg-[#3095b5] text-white text-center capitalize whitespace-nowrap rounded flex justify-center items-center px-6 py-[.4rem] text-base font-medium leading-[180%] transition-colors duration-200 hover:bg-[#247992] hover:border-[#247992]">
                           Try For Free
                         </Link>
                       </div>

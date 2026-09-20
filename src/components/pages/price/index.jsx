@@ -5,6 +5,7 @@ import Reveal from "@/components/utils/Reveal";
 import { useState } from "react";
 import PriceCard2 from "./components/PriceCard2";
 import PricingComparison from "./components/PricingComparison";
+import Link from "next/link";
 
 
 function Price() {
@@ -392,14 +393,14 @@ function Price() {
                       {screen}
                     </p>
 
-                    <button
-                      className={`w-full py-2 mb-4 rounded-md ${plan.popular
+                    <Link href={"https://displaylab.net/signup"} target="_blank"
+                      className={`text-center w-full py-2 mb-4 rounded-md ${plan.popular
                         ? "bg-[#005582] text-white"
                         : "bg-[#3095b5] text-white"
                         }`}
                     >
                       Try For Free
-                    </button>
+                    </Link>
 
                     {/* Features */}
                     <ul className="space-y-2 text-sm text-gray-600 mt-auto">

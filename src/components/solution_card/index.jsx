@@ -3,7 +3,7 @@ import Reveal from "../utils/Reveal";
 import Video from "../Video";
 import SingleSolutionCard2 from "./SingleSolutionCard2";
 
-function SolutionCard() {
+function Powerful_Tools_To_Run() {
   const card_Data = [
     {
       icon: "/images/explore-Display/Icon-01.png",
@@ -113,4 +113,4 @@ function SolutionCard() {
   );
 }
 
-export default SolutionCard;
+export default Powerful_Tools_To_Run;

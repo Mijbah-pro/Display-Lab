@@ -14,6 +14,7 @@ import ProductLines from "./components/ProductLines";
 import Products from "./components/Products";
 import ReadyToUpgrade from "./components/ReadyToUpgrade";
 import ServingBusiness from "./components/Serving_Business";
+import ProductsVideo from "@/components/productsVideo";
 
 
 function Product() {
@@ -60,6 +61,7 @@ function Product() {
       <NeedHelp />
       <ServingBusiness />
       <MindMap />
+      <ProductsVideo />
       <ControlEveryScreen />
       <NeedContentToo />
       <ReadyToUpgrade />
